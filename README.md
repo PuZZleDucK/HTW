@@ -18,6 +18,7 @@ Simple Ruby Toy Robot for HTW.
 - [ ] move
 - [ ] turn
 - [ ] report
+- [ ] cli interface
 - [ ] invalid commands
 - [ ] ci setup
 - [ ] example files
