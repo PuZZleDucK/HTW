@@ -4,13 +4,16 @@ Simple Ruby Toy Robot for HTW.
 
 
 
-
+# Instructions
+- Clone:
+- Test: rspec robot_spec.rb
+- Run ./robot.rb "input"
 
 
 # Plan
 - [x] reviw challenge and plan
-- [ ] setup project structure
-- [ ] setup tests
+- [x] setup project structure
+- [x] setup tests
 - [ ] test & develop: place
 - [ ] move
 - [ ] turn
@@ -18,6 +21,7 @@ Simple Ruby Toy Robot for HTW.
 - [ ] invalid commands
 - [ ] ci setup
 - [ ] example files
+- [ ] refactor to symbols
 
 
 
