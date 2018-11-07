@@ -4,6 +4,22 @@ include Test::Unit::Assertions
 
 RSpec.describe Robot do
 
+  describe 'Turn' do
+    it 'turning a placed robot left updates facing' do
+      r = Robot.new()
+      r.place(1,2,"NORTH")
+      r.left()
+      expect(r.facing).to eq("WEST")
+    end
+
+    it 'turning a placed robot right updates facing' do
+      r = Robot.new()
+      r.place(1,2,"NORTH")
+      r.right()
+      expect(r.facing).to eq("EAST")
+    end
+  end
+
   describe 'Place' do
     it 'place command results in updated coords' do
       r = Robot.new()
