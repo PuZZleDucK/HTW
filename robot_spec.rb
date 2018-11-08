@@ -5,6 +5,51 @@ include Test::Unit::Assertions
 RSpec.describe Robot do
 
   describe 'Move' do
+    it 'movment off north edge prevented' do
+      r = Robot.new()
+      r.place(4,2,"NORTH")
+      r.move()
+      expect(r.x_location).to eq(4)
+      expect(r.y_location).to eq(2)
+      expect(r.facing).to eq("NORTH")
+    end
+
+    it 'movment off east edge prevented' do
+      r = Robot.new()
+      r.place(4,4,"EAST")
+      r.move()
+      expect(r.x_location).to eq(4)
+      expect(r.y_location).to eq(4)
+      expect(r.facing).to eq("EAST")
+    end
+
+    it 'movment off south edge prevented' do
+      r = Robot.new()
+      r.place(0,2,"SOUTH")
+      r.move()
+      expect(r.x_location).to eq(0)
+      expect(r.y_location).to eq(2)
+      expect(r.facing).to eq("SOUTH")
+    end
+
+    it 'movment off west edge prevented' do
+      r = Robot.new()
+      r.place(4,0,"WEST")
+      r.move()
+      expect(r.x_location).to eq(4)
+      expect(r.y_location).to eq(0)
+      expect(r.facing).to eq("WEST")
+    end
+
+    it 'move before place has no effect' do
+      r = Robot.new()
+      r.move()
+      r.place(1,2,"NORTH")
+      expect(r.x_location).to eq(1)
+      expect(r.y_location).to eq(2)
+      expect(r.facing).to eq("NORTH")
+    end
+
     it 'basic movment north' do
       r = Robot.new()
       r.place(1,2,"NORTH")
