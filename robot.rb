@@ -10,6 +10,10 @@ class Robot
     @facing = ""
   end
 
+  def report
+    "#{@x_location},#{@y_location},#{@facing}"
+  end
+
   def move
     @x_location = @x_location += 1 if @facing == "NORTH" && @x_location < 4
     @y_location = @y_location += 1 if @facing == "EAST" && @y_location < 4
