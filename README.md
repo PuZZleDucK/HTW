@@ -22,6 +22,7 @@ Simple Ruby Toy Robot for HTW.
 - [ ] invalid commands
 - [ ] ci setup
 - [ ] example files
+- [ ] integration tests
 - [ ] refactor to symbols
 
 

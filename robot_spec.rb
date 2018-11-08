@@ -5,6 +5,11 @@ include Test::Unit::Assertions
 RSpec.describe Robot do
 
   describe 'Report' do
+    it 'no report before placement' do
+      r = Robot.new()
+      expect(r.report()).to eq(nil)
+    end
+
     it 'basic report usage' do
       r = Robot.new()
       r.place(4,2,"NORTH")
