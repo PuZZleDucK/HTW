@@ -2,7 +2,15 @@
 
 Simple Ruby Toy Robot for HTW.
 
-CI setup: https://puzzleduck.semaphoreci.com/projects/HTW
+Features:
+- CI setup: https://puzzleduck.semaphoreci.com/projects/HTW
+- Command line interface
+- TDD RSpec tests committed before code
+- Example files to run with expected output
+- Integration tests that run the program like a user would
+- Robot has no dependencies
+- Bundler used to package only test dependencies
+- Still a couple of things on the todo list I'd like to have achieved
 
 
 # Instructions
@@ -12,7 +20,7 @@ CI setup: https://puzzleduck.semaphoreci.com/projects/HTW
 - Run `./robot.rb <input file>`
 
 
-# Plan
+# The Plan
 - [x] reviw challenge and plan
 - [x] setup project structure
 - [x] setup tests
@@ -24,9 +32,10 @@ CI setup: https://puzzleduck.semaphoreci.com/projects/HTW
 - [x] cli interface
 - [x] invalid commands
 - [x] ci setup
-- [ ] example files
+- [ ] more example files
 - [x] integration tests
 - [ ] handle invalid commands
+- [ ] package into gem and publish
 
 
 
