@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-puts "\nToy Robot Loaded"
+puts "HTW Toy Robot\n  Usage: ./robot <path/to/input/file>"
 
 class Robot
   attr_reader :x_location, :y_location, :facing
