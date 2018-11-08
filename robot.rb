@@ -16,4 +16,12 @@ class Robot
     @y_location = y_new
     @facing = facing_new
   end
+
+  def left
+    @facing = @@directions[(@@directions.find_index(@facing) - 1) % 4]
+  end
+
+  def right
+    @facing = @@directions[(@@directions.find_index(@facing) + 1) % 4]
+  end
 end
