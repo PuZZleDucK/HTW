@@ -11,6 +11,7 @@ class Robot
   end
 
   def report
+    return if @x_location == -1 && @y_location == -1 && @facing == ""
     "#{@x_location},#{@y_location},#{@facing}"
   end
 
