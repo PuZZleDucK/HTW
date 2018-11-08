@@ -24,6 +24,7 @@ blocks:
         commands:
           - checkout
           - sudo apt install -y ruby-rspec-core
+          - bundle install
           - rspec robot_spec.rb
 
   - name: "Deploy"
