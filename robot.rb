@@ -10,6 +10,13 @@ class Robot
     @facing = ""
   end
 
+  def move
+    @x_location = @x_location += 1 if @facing == "NORTH"
+    @y_location = @y_location += 1 if @facing == "EAST"
+    @x_location = @x_location -= 1 if @facing == "SOUTH"
+    @y_location = @y_location -= 1 if @facing == "WEST"
+  end
+
   def place(x_new, y_new, facing_new)
     return unless x_new >= 0 && x_new < 5 && y_new >= 0 && y_new < 5 && @@directions.include?(facing_new)
     @x_location = x_new
