@@ -4,6 +4,13 @@ include Test::Unit::Assertions
 
 RSpec.describe Robot do
 
+  describe 'Cli interface' do
+    it 'with no arguments the program prints usage information' do
+      output = `./robot.rb`
+      expect(output).to eq("HTW Toy Robot\n  Usage: ./robot <path/to/input/file>\n")
+    end
+  end
+
   describe 'Report' do
     it 'no report before placement' do
       r = Robot.new()
