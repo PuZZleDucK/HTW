@@ -5,6 +5,43 @@ include Test::Unit::Assertions
 RSpec.describe Robot do
 
   describe 'Turn' do
+    it 'turning unplaced robot has no effect' do
+      r = Robot.new()
+      r.left()
+      r.left()
+      expect(r.facing).to eq("")
+      r.right()
+      expect(r.facing).to eq("")
+      r.place(1,2,"NORTH")
+      expect(r.facing).to eq("NORTH")
+    end
+
+    it 'turning full circle left' do
+      r = Robot.new()
+      r.place(1,2,"NORTH")
+      r.left()
+      expect(r.facing).to eq("WEST")
+      r.left()
+      expect(r.facing).to eq("SOUTH")
+      r.left()
+      expect(r.facing).to eq("EAST")
+      r.left()
+      expect(r.facing).to eq("NORTH")
+    end
+
+    it 'turning full circle right' do
+      r = Robot.new()
+      r.place(1,2,"NORTH")
+      r.right()
+      expect(r.facing).to eq("EAST")
+      r.right()
+      expect(r.facing).to eq("SOUTH")
+      r.right()
+      expect(r.facing).to eq("WEST")
+      r.right()
+      expect(r.facing).to eq("NORTH")
+    end
+
     it 'turning a placed robot left updates facing' do
       r = Robot.new()
       r.place(1,2,"NORTH")
