@@ -4,6 +4,14 @@ include Test::Unit::Assertions
 
 RSpec.describe Robot do
 
+  describe 'Report' do
+    it 'basic report usage' do
+      r = Robot.new()
+      r.place(4,2,"NORTH")
+      expect(r.report()).to eq("4,2,NORTH")
+    end
+  end
+
   describe 'Move' do
     it 'movment off north edge prevented' do
       r = Robot.new()
