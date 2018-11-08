@@ -18,10 +18,12 @@ class Robot
   end
 
   def left
+    return unless @x_location >= 0 && @y_location >= 0 && @@directions.include?(@facing)
     @facing = @@directions[(@@directions.find_index(@facing) - 1) % 4]
   end
 
   def right
+    return unless @x_location >= 0 && @y_location >= 0 && @@directions.include?(@facing)
     @facing = @@directions[(@@directions.find_index(@facing) + 1) % 4]
   end
 end
