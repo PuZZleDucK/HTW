@@ -5,6 +5,11 @@ include Test::Unit::Assertions
 RSpec.describe Robot do
 
   describe 'Cli interface' do
+    it 'with a example with ignored commands we get the expected output' do
+      output = `./robot.rb examples/toy_02_input.txt`
+      expect(output).to eq(File::read "examples/toy_02_output.txt")
+    end
+
     it 'with a simple example we get the expected output' do
       output = `./robot.rb examples/toy_01_input.txt`
       expect(output).to eq(File::read "examples/toy_01_output.txt")

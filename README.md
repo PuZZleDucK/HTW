@@ -2,10 +2,12 @@
 
 Simple Ruby Toy Robot for HTW.
 
+CI setup: https://puzzleduck.semaphoreci.com/projects/HTW
 
 
 # Instructions
 - Clone: `git clone https://github.com/PuZZleDucK/HTW.git`
+- Setup: `bundle install`
 - Test: `rspec robot_spec.rb`
 - Run `./robot.rb <input file>`
 
@@ -21,10 +23,10 @@ Simple Ruby Toy Robot for HTW.
 - [x] simple cli example
 - [x] cli interface
 - [x] invalid commands
-- [ ] ci setup
+- [x] ci setup
 - [ ] example files
-- [ ] integration tests
-- [ ] refactor to symbols
+- [x] integration tests
+- [ ] handle invalid commands
 
 
 
