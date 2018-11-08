@@ -5,9 +5,9 @@ Simple Ruby Toy Robot for HTW.
 
 
 # Instructions
-- Clone:
-- Test: rspec robot_spec.rb
-- Run ./robot.rb "input"
+- Clone: `git clone https://github.com/PuZZleDucK/HTW.git`
+- Test: `rspec robot_spec.rb`
+- Run `./robot.rb <input file>`
 
 
 # Plan

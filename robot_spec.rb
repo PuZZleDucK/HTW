@@ -5,6 +5,11 @@ include Test::Unit::Assertions
 RSpec.describe Robot do
 
   describe 'Cli interface' do
+    it 'with a simple example we get the expected output' do
+      output = `./robot.rb examples/toy_01_input.txt`
+      expect(output).to eq(File::read "examples/toy_01_output.txt")
+    end
+
     it 'with no arguments the program prints usage information' do
       output = `./robot.rb`
       expect(output).to eq("HTW Toy Robot\n  Usage: ./robot <path/to/input/file>\n")
