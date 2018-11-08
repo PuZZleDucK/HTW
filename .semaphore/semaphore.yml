@@ -23,7 +23,7 @@ blocks:
       - name: Test
         commands:
           - checkout
-          - sudo apt install ruby-rspec-core
+          - sudo apt install -y ruby-rspec-core
           - rspec robot_spec.rb
 
   - name: "Deploy"
