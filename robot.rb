@@ -11,10 +11,10 @@ class Robot
   end
 
   def move
-    @x_location = @x_location += 1 if @facing == "NORTH"
-    @y_location = @y_location += 1 if @facing == "EAST"
-    @x_location = @x_location -= 1 if @facing == "SOUTH"
-    @y_location = @y_location -= 1 if @facing == "WEST"
+    @x_location = @x_location += 1 if @facing == "NORTH" && @x_location < 4
+    @y_location = @y_location += 1 if @facing == "EAST" && @y_location < 4
+    @x_location = @x_location -= 1 if @facing == "SOUTH" && @x_location > 0
+    @y_location = @y_location -= 1 if @facing == "WEST" && @y_location > 0
   end
 
   def place(x_new, y_new, facing_new)

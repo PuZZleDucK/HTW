@@ -16,7 +16,7 @@ Simple Ruby Toy Robot for HTW.
 - [x] setup tests
 - [x] test & develop: place
 - [x] turn
-- [ ] move
+- [x] move
 - [ ] report
 - [ ] cli interface
 - [ ] invalid commands
