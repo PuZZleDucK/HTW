@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-puts "HTW Toy Robot\n  Usage: ./robot <path/to/input/file>"
 
 class Robot
   attr_reader :x_location, :y_location, :facing
@@ -12,7 +11,7 @@ class Robot
 
   def report
     return if @x_location == -1 && @y_location == -1 && @facing == ""
-    "#{@x_location},#{@y_location},#{@facing}"
+    return "#{@x_location},#{@y_location},#{@facing}"
   end
 
   def move
@@ -37,5 +36,26 @@ class Robot
   def right
     return unless @x_location >= 0 && @y_location >= 0 && @@directions.include?(@facing)
     @facing = @@directions[(@@directions.find_index(@facing) + 1) % 4]
+  end
+end
+
+
+puts "HTW Toy Robot\n  Usage: ./robot <path/to/input/file>" if ARGV.size == 0
+
+robot = Robot.new()
+commands = (File::read ARGV[0]).split("\n").each do |input_line|
+  command, rest = input_line.split(" ")
+  case command
+  when "PLACE"
+    command_args = rest.split(",")
+    robot.place(command_args[0].to_i, command_args[1].to_i, command_args[2])
+  when "MOVE"
+    robot.move()
+  when "LEFT"
+    robot.left()
+  when "RIGHT"
+    robot.right()
+  when "REPORT"
+    puts robot.report()
   end
 end
