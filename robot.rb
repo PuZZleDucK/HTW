@@ -56,6 +56,7 @@ commands = (File::read ARGV[0]).split("\n").each do |input_line|
   when "RIGHT"
     robot.right()
   when "REPORT"
-    puts robot.report()
+    output = robot.report()
+    puts output unless output == nil
   end
 end
