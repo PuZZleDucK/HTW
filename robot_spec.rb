@@ -4,6 +4,44 @@ include Test::Unit::Assertions
 
 RSpec.describe Robot do
 
+  describe 'Move' do
+    it 'basic movment north' do
+      r = Robot.new()
+      r.place(1,2,"NORTH")
+      r.move()
+      expect(r.x_location).to eq(2)
+      expect(r.y_location).to eq(2)
+      expect(r.facing).to eq("NORTH")
+    end
+
+    it 'basic movment east' do
+      r = Robot.new()
+      r.place(1,2,"EAST")
+      r.move()
+      expect(r.x_location).to eq(1)
+      expect(r.y_location).to eq(3)
+      expect(r.facing).to eq("EAST")
+    end
+
+    it 'basic movment south' do
+      r = Robot.new()
+      r.place(1,2,"SOUTH")
+      r.move()
+      expect(r.x_location).to eq(0)
+      expect(r.y_location).to eq(2)
+      expect(r.facing).to eq("SOUTH")
+    end
+
+    it 'basic movment west' do
+      r = Robot.new()
+      r.place(1,2,"WEST")
+      r.move()
+      expect(r.x_location).to eq(1)
+      expect(r.y_location).to eq(1)
+      expect(r.facing).to eq("WEST")
+    end
+  end
+
   describe 'Turn' do
     it 'turning unplaced robot has no effect' do
       r = Robot.new()
